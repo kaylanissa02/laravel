@@ -13,9 +13,24 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->text('name');
+            $table->text('address');
+            $table->text('phone');
+            $table->date('date');
+            $table->unsignedBigInteger('court_id');
+            $table->foreign('court_id')->references('id')->on('courts');
+            $table->time('starttime');
+            $table->time('endtime');
+            $table->integer('costume');
+            $table->integer('shoes');
+            $table->integer('grandtotal');
+            $table->integer('paytotal');
             $table->timestamps();
         });
-    } 
+    }
+
     /**
      * Reverse the migrations.
      */

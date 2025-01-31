@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('court_types', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->text('name');
         });
     }
 

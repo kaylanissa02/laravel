@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 use Illuminate\Database\Seeder;
 
-class Court_Type extends Seeder
+class CourtTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
